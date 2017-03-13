@@ -101,7 +101,23 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button ThreadButton = (Button) findViewById(R.id.ToThreadTest);
+        ThreadButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, ThreadTestActivity.class);
+                startActivity(intent);
+            }
+        });
 
+        Button asyncButton = (Button) findViewById(R.id.ToLearnAsync);
+        asyncButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, LearnAsyncTaskActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 
     //从打开的活动中返回的数据
