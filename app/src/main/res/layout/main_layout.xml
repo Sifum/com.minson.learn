@@ -79,11 +79,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="To learn AsyncTask" />
-    <Button
-        android:id="@+id/ToUIDesign"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="To learn Material Design"/>
 
 
 </LinearLayout>

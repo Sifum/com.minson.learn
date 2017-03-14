@@ -3,4 +3,21 @@
     android:orientation="vertical" android:layout_width="match_parent"
     android:layout_height="match_parent">
 
+    <Button
+        android:id="@+id/toToolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn Toolbar"/>
+
+    <Button
+        android:id="@+id/toDrawerLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn DrawerLayout"/>
+
+    <Button
+        android:id="@+id/toNavigationView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn NavigationView"/>
 </LinearLayout>

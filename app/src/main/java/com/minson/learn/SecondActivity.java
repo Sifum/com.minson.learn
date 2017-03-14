@@ -20,11 +20,12 @@ public class SecondActivity extends AppCompatActivity {
         ActivityCollector.addActivity(this);
 
         //将默认的标题栏隐藏
-        ActionBar actionBar = getSupportActionBar();
-        if(actionBar != null)
-        {
-            actionBar.hide();
-        }
+        //在res/values/styles.xml中没有修改DarkActionBar修改为NoActionBar的情况下可用
+//        ActionBar actionBar = getSupportActionBar();
+//        if(actionBar != null)
+//        {
+//            actionBar.hide();
+//        }
 
         //获得从上一个活动传递的信息，然后点击seeButton显示此信息
         intent = getIntent();

@@ -4,15 +4,46 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
 
-public class MaterialDesignActivity extends AppCompatActivity {
+public class MaterialDesignActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.material_design_layout);
 
+        Button toolbarButton = (Button) findViewById(R.id.toToolbar);
 
+        toolbarButton.setOnClickListener(new View.OnClickListener(){
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MaterialDesignActivity.this, ToolbarActivity.class);
+                startActivity(intent);
+            }
+        });
+
+        Button drawerButton = (Button) findViewById(R.id.toDrawerLayout);
+        drawerButton.setOnClickListener(this);
+
+        Button navigationButton = (Button) findViewById(R.id.toNavigationView);
+        navigationButton.setOnClickListener(this);
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.toDrawerLayout:
+                DrawerLayoutActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toNavigationView:
+                NavigationViewActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            default:
+                break;
+        }
     }
 
     public static void actionStart(Context context, String ... data)

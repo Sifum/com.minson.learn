@@ -33,7 +33,10 @@
         <activity android:name=".ThreadTestActivity" />
         <activity android:name=".LearnAsyncTaskActivity" />
         <activity android:name=".MaterialDesignActivity" />
-        <activity android:name=".UIInterfaceActivity"></activity>
+        <activity android:name=".UIInterfaceActivity" />
+        <activity android:name=".ToolbarActivity" />
+        <activity android:name=".DrawerLayoutActivity" />
+        <activity android:name=".NavigationViewActivity"></activity>
     </application>
 
 </manifest>
