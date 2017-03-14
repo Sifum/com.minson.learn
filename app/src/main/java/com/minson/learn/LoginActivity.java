@@ -1,5 +1,7 @@
 package com.minson.learn;
 
+import android.content.Context;
+import android.content.Intent;
 import android.content.SharedPreferences;
 import android.preference.PreferenceManager;
 import android.support.v7.app.AppCompatActivity;
@@ -76,5 +78,18 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+    }
+
+    public static void actionStart(Context context, String ... data)
+    {
+        Intent intent = new Intent(context, LoginActivity.class);
+        if (data.length > 0)
+        {
+            for(int i = 0; i < data.length; i++)
+            {
+                intent.putExtra("param" + i, data[i]);
+            }
+        }
+        context.startActivity(intent);
     }
 }

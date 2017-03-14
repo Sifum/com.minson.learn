@@ -9,7 +9,8 @@ import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 
-public class MainActivity extends AppCompatActivity {
+
+public class MainActivity extends AppCompatActivity implements View.OnClickListener{
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -29,14 +30,8 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = (Button) findViewById(R.id.button2);
-        button2.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LearnUIActivity.class);
-                startActivity(intent);
-            }
-        });
+        Button UIButton = (Button) findViewById(R.id.toLearnUI);
+        UIButton.setOnClickListener(this);
 
         Button percentButton = (Button) findViewById(R.id.percentButton);
         percentButton.setOnClickListener(new View.OnClickListener(){
@@ -57,67 +52,60 @@ public class MainActivity extends AppCompatActivity {
         });
 
         Button fileStoreButton = (Button) findViewById(R.id.toFileStore);
-        fileStoreButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, FileStoreActivity.class);
-                startActivity(intent);
-            }
-        });
+        fileStoreButton.setOnClickListener(this);
 
         Button loginButton = (Button) findViewById(R.id.toLogin);
-        loginButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LoginActivity.class);
-                startActivity(intent);
-            }
-        });
+        loginButton.setOnClickListener(this);
 
         Button learndbButton = (Button) findViewById(R.id.toLearnDB);
-        learndbButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, DBLearnActivity.class);
-                startActivity(intent);
-            }
-        });
+        learndbButton.setOnClickListener(this);
 
         Button learnNotificationButton = (Button) findViewById(R.id.toLearnNotification);
-        learnNotificationButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SendNotificationLayout.class);
-                startActivity(intent);
-            }
-        });
+        learnNotificationButton.setOnClickListener(this);
 
         Button webViewButton = (Button) findViewById(R.id.ToWebView);
-        webViewButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, WebViewActivity.class);
-                startActivity(intent);
-            }
-        });
+        webViewButton.setOnClickListener(this);
 
         Button ThreadButton = (Button) findViewById(R.id.ToThreadTest);
-        ThreadButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, ThreadTestActivity.class);
-                startActivity(intent);
-            }
-        });
+        ThreadButton.setOnClickListener(this);
 
         Button asyncButton = (Button) findViewById(R.id.ToLearnAsync);
-        asyncButton.setOnClickListener(new View.OnClickListener(){
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, LearnAsyncTaskActivity.class);
-                startActivity(intent);
-            }
-        });
+        asyncButton.setOnClickListener(this);
+
+
+    }
+
+    @Override
+    public void onClick(View v) {
+        switch (v.getId())
+        {
+            case R.id.ToLearnAsync:
+                LearnAsyncTaskActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.ToThreadTest:
+                ThreadTestActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.ToWebView:
+                WebViewActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.toLearnNotification:
+                SendNotificationLayout.actionStart(MainActivity.this);
+                break;
+            case R.id.toLearnDB:
+                DBLearnActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.toLogin:
+                LoginActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.toFileStore:
+                FileStoreActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.toLearnUI:
+                UIInterfaceActivity.actionStart(MainActivity.this);
+                break;
+            default:
+                break;
+        }
     }
 
     //从打开的活动中返回的数据

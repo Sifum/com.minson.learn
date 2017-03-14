@@ -2,6 +2,7 @@ package com.minson.learn;
 
 import android.app.ProgressDialog;
 import android.content.Context;
+import android.content.Intent;
 import android.os.AsyncTask;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -31,4 +32,16 @@ public class WebViewActivity extends AppCompatActivity {
         progressDialog.cancel();
     }
 
+    public static void actionStart(Context context, String ... data)
+    {
+        Intent intent = new Intent(context, WebViewActivity.class);
+        if (data.length > 0)
+        {
+            for(int i = 0; i < data.length; i++)
+            {
+                intent.putExtra("param" + i, data[i]);
+            }
+        }
+        context.startActivity(intent);
+    }
 }

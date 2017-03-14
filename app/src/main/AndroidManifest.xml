@@ -31,7 +31,9 @@
         <activity android:name=".SendNotificationLayout" />
         <activity android:name=".WebViewActivity" />
         <activity android:name=".ThreadTestActivity" />
-        <activity android:name=".LearnAsyncTaskActivity"></activity>
+        <activity android:name=".LearnAsyncTaskActivity" />
+        <activity android:name=".MaterialDesignActivity" />
+        <activity android:name=".UIInterfaceActivity"></activity>
     </application>
 
 </manifest>

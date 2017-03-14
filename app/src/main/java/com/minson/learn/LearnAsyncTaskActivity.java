@@ -1,5 +1,7 @@
 package com.minson.learn;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
@@ -29,6 +31,19 @@ public class LearnAsyncTaskActivity extends AppCompatActivity {
                 asyncTask.execute(1000);
             }
         });
+    }
+
+    public static void actionStart(Context context, String ... data)
+    {
+        Intent intent = new Intent(context, LearnAsyncTaskActivity.class);
+        if (data.length > 0)
+        {
+            for(int i = 0; i < data.length; i++)
+            {
+                intent.putExtra("param" + i, data[i]);
+            }
+        }
+        context.startActivity(intent);
     }
 
 }

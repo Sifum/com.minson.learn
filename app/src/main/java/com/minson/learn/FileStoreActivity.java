@@ -1,5 +1,7 @@
 package com.minson.learn;
 
+import android.content.Context;
+import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
@@ -103,5 +105,18 @@ public class FileStoreActivity extends AppCompatActivity implements View.OnClick
             default:
                 break;
         }
+    }
+
+    public static void actionStart(Context context, String ... data)
+    {
+        Intent intent = new Intent(context, FileStoreActivity.class);
+        if (data.length > 0)
+        {
+            for(int i = 0; i < data.length; i++)
+            {
+                intent.putExtra("param" + i, data[i]);
+            }
+        }
+        context.startActivity(intent);
     }
 }

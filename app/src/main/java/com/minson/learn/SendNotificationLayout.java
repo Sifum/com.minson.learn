@@ -4,6 +4,7 @@ import android.app.Notification;
 import android.app.NotificationManager;
 import android.app.PendingIntent;
 import android.content.BroadcastReceiver;
+import android.content.Context;
 import android.content.Intent;
 import android.graphics.BitmapFactory;
 import android.graphics.Color;
@@ -58,5 +59,19 @@ public class SendNotificationLayout extends AppCompatActivity implements View.On
             default:
                 break;
         }
+    }
+
+
+    public static void actionStart(Context context, String ... data)
+    {
+        Intent intent = new Intent(context, SendNotificationLayout.class);
+        if (data.length > 0)
+        {
+            for(int i = 0; i < data.length; i++)
+            {
+                intent.putExtra("param" + i, data[i]);
+            }
+        }
+        context.startActivity(intent);
     }
 }
