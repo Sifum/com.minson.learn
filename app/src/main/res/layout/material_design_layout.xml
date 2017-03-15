@@ -20,4 +20,36 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="To Learn NavigationView"/>
+
+    <Button
+        android:id="@+id/toFloatingAction"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn Floating action"/>
+
+    <Button
+        android:id="@+id/toCoordinatorLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn CoordinatorLayout"/>
+
+
+    <Button
+        android:id="@+id/toCardView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn CardView"/>
+
+    <Button
+        android:id="@+id/toAppBarLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn AppBarLayout"/>
+
+    <Button
+        android:id="@+id/toSwipeFresh"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="To Learn SwipeFresh"/>
+
 </LinearLayout>

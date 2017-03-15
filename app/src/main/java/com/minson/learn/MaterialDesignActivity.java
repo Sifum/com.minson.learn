@@ -29,6 +29,21 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
 
         Button navigationButton = (Button) findViewById(R.id.toNavigationView);
         navigationButton.setOnClickListener(this);
+
+        Button floatingButton = (Button) findViewById(R.id.toFloatingAction);
+        floatingButton.setOnClickListener(this);
+
+        Button coordinatorLayoutButton = (Button) findViewById(R.id.toCoordinatorLayout);
+        coordinatorLayoutButton.setOnClickListener(this);
+
+        Button cardViewButton = (Button) findViewById(R.id.toCardView);
+        cardViewButton.setOnClickListener(this);
+
+        Button appBarButton = (Button) findViewById(R.id.toAppBarLayout);
+        appBarButton.setOnClickListener(this);
+
+        Button swipeFreshButton = (Button) findViewById(R.id.toSwipeFresh);
+        swipeFreshButton.setOnClickListener(this);
     }
 
     @Override
@@ -40,6 +55,21 @@ public class MaterialDesignActivity extends AppCompatActivity implements View.On
                 break;
             case R.id.toNavigationView:
                 NavigationViewActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toFloatingAction:
+                FloatingActionActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toCoordinatorLayout:
+                CoordinatorLayoutActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toCardView:
+                CardViewActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toAppBarLayout:
+                AppBarLayoutActivity.actionStart(MaterialDesignActivity.this);
+                break;
+            case R.id.toSwipeFresh:
+                SwipeFreshActivity.actionStart(MaterialDesignActivity.this);
                 break;
             default:
                 break;
