@@ -72,7 +72,8 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         Button asyncButton = (Button) findViewById(R.id.ToLearnAsync);
         asyncButton.setOnClickListener(this);
 
-
+        Button otherButton = (Button) findViewById(R.id.ToOtherActivity);
+        otherButton.setOnClickListener(this);
     }
 
     @Override
@@ -102,6 +103,9 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 break;
             case R.id.toLearnUI:
                 UIInterfaceActivity.actionStart(MainActivity.this);
+                break;
+            case R.id.ToOtherActivity:
+                OtherActivity.actionStart(MainActivity.this);
                 break;
             default:
                 break;

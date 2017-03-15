@@ -42,7 +42,9 @@
         <activity android:name=".CardViewActivity" />
         <activity android:name=".AppBarLayoutActivity" />
         <activity android:name=".SwipeFreshActivity" />
-        <activity android:name=".LearnSerializableActivity"></activity>
+        <activity android:name=".LearnSerializableActivity" />
+        <activity android:name=".BiyingActivity" />
+        <activity android:name=".OtherActivity"></activity>
     </application>
 
 </manifest>
